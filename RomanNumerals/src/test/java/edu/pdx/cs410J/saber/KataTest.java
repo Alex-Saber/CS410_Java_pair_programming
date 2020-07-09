@@ -26,4 +26,9 @@ public class KataTest
   @Test
   public void romanNumeralFor39IsXXXIX() {assertThat(Kata.calculateRomanNumeral(39), equalTo("XXXIX"));}
 
+  @Test
+  public void romanNumeralFor3549IsMMMDXLIX() {
+    assertThat(Kata.calculateRomanNumeral(3549), equalTo("MMMDXLIX"));
+  }
+
 }
