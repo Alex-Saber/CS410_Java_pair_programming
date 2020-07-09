@@ -1,5 +1,8 @@
 package edu.pdx.cs410J.saber;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * A class for getting started with a code kata
  *
@@ -14,7 +17,26 @@ public class Kata {
     System.exit(1);
   }
 
-  public static String romanNumeralFor(int number) {
+  public static String calculateRomanNumeral(int number) {
+    ArrayList<Integer> values = new ArrayList<>(
+            Arrays.asList(
+                    10, 9, 5, 4, 1
+            )
+    );
+
+    ArrayList<String> symbols = new ArrayList<>(
+            Arrays.asList(
+                    "X", "IX", "V", "IV", "I"
+            )
+    );
+
+    StringBuilder toReturn = new StringBuilder();
+
+//    for (Integer val: )
     return "I";
+  }
+
+  public static String romanNumeralFor(int number) {
+    return calculateRomanNumeral(number);
   }
 }
