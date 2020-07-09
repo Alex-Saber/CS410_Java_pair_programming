@@ -15,12 +15,15 @@ public class KataTest
 
   @Test
   public void romanNumeralFor1IsI() {
-    assertThat(Kata.romanNumeralFor(1), equalTo("I"));
+    assertThat(Kata.calculateRomanNumeral(1), equalTo("I"));
   }
 
   @Test
   public void romanNumeralFor5IsV() {
-    assertThat(Kata.romanNumeralFor(5), equalTo("V"));
+    assertThat(Kata.calculateRomanNumeral(5), equalTo("V"));
   }
+
+  @Test
+  public void romanNumeralFor39IsXXXIX() {assertThat(Kata.calculateRomanNumeral(39), equalTo("XXXIX"));}
 
 }

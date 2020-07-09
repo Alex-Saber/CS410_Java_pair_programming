@@ -10,7 +10,7 @@ import java.util.Arrays;
  * class (and its tests).
  */
 public class Kata {
-                                                                                    
+
 
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
@@ -32,11 +32,21 @@ public class Kata {
 
     StringBuilder toReturn = new StringBuilder();
 
-//    for (Integer val: )
-    return "I";
-  }
+    int index = 0;
+    int remainder = 0;
+    int intMod = 0;
 
-  public static String romanNumeralFor(int number) {
-    return calculateRomanNumeral(number);
+    while (number > 0){
+      if(number >= values.get(index)){
+        remainder = number % values.get(index);
+        intMod = (number - remainder) / values.get(index);
+        number = number - (intMod * values.get(index));
+        for(int i=0; i < intMod; i++){
+          toReturn.append(symbols.get(index));
+        }
+      }
+      index++;
+    }
+    return toReturn.toString();
   }
 }
